@@ -1,13 +1,12 @@
-package Arrays;
 import java.util.*;
-
-public class ArrayElement {
-    public static void noteDivisiblebyFour(int arr[]){
+public class MinimumInArray {
+    public static int getmin(int arr[]){
+        int res = arr[0];
         for(int i=0; i<arr.length; i++){
-            if(i%4 != 0){
-              System.out.print(arr[i]+" ");  
-            }
+            res = Math.min(res,arr[i]);
+                 
         }
+        return res;
     }
 
     public static void main(String[] args) {
@@ -16,7 +15,8 @@ public class ArrayElement {
         int arr[] = new int[n];
         for(int i=0; i<n; i++){
             arr[i] = sc.nextInt();
+            
         }
-        noteDivisiblebyFour(arr);
+        System.out.println(getmin(arr));
     }
 }

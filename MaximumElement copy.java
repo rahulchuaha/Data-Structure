@@ -1,13 +1,13 @@
-package Arrays;
 import java.util.*;
-
-public class ArrayElement {
-    public static void noteDivisiblebyFour(int arr[]){
+public class MaximumElement{
+    public static int findValue(int arr[]){
+        int max = Integer.MIN_VALUE;
         for(int i=0; i<arr.length; i++){
-            if(i%4 != 0){
-              System.out.print(arr[i]+" ");  
-            }
+            if(arr[i] > max)
+                max = arr[i];
+            
         }
+        return max;
     }
 
     public static void main(String[] args) {
@@ -17,6 +17,6 @@ public class ArrayElement {
         for(int i=0; i<n; i++){
             arr[i] = sc.nextInt();
         }
-        noteDivisiblebyFour(arr);
+        System.out.println(findValue(arr));
     }
 }

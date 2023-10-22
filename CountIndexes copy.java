@@ -1,13 +1,11 @@
-package Arrays;
 import java.util.*;
-
-public class ArrayElement {
-    public static void noteDivisiblebyFour(int arr[]){
+public class CountIndexes {
+    public static int indexValue(int arr[]){
+        int count = 0;
         for(int i=0; i<arr.length; i++){
-            if(i%4 != 0){
-              System.out.print(arr[i]+" ");  
-            }
+            if(arr[i] == i) count++;
         }
+        return count;
     }
 
     public static void main(String[] args) {
@@ -17,6 +15,6 @@ public class ArrayElement {
         for(int i=0; i<n; i++){
             arr[i] = sc.nextInt();
         }
-        noteDivisiblebyFour(arr);
+        System.out.println(indexValue(arr));
     }
 }
